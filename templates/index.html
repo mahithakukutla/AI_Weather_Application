@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AI Weather Assistant</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+  <main>
+    <p class="tag">LOCAL FORECAST</p><h1>AI Weather Assistant</h1>
+    <form id="weather-form"><label for="city">City</label><div><input id="city" name="city" placeholder="e.g. Mumbai" required><button>Check weather</button></div></form>
+    <p id="status" aria-live="polite"></p>
+    <section id="weather-card" hidden>
+      <header><div><h2 id="location"></h2><p id="description"></p></div><img id="icon" alt="Weather icon"></header>
+      <p class="temp"><span id="temperature"></span>°C</p>
+      <p>Feels like <b id="feels-like"></b>°C · Humidity <b id="humidity"></b>% · Wind <b id="wind"></b> m/s</p>
+      <aside><b>✦ AI tip</b><p id="advice"></p></aside>
+    </section>
+  </main>
+  <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
